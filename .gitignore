@@ -1,0 +1,29 @@
+# Виртуальные окружения
+.venv/
+venv/
+env/
+
+# Кэш байт-кода Python
+__pycache__/
+*.py[cod]
+
+# Настройки PyCharm / VSCode
+.idea/
+.vscode/
+
+# Системные файлы (Windows/Mac)
+.DS_Store
+Thumbs.db
+
+# Jupyter Notebook (чекпоинты, которые создаются сами)
+.ipynb_checkpoints/
+
+# Файлы с секретами (токены, пароли)
+.env
+config.ini
+secrets.json
+
+# Личные данные / базы данных (если они большие)
+*.sqlite3
+*.db
+*.csv  # (если CSV-файл нужен вам только локально, но не на GitHub)

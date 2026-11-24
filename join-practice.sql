@@ -26,7 +26,7 @@ select
 from orders
 join users on orders.user_id = users.id
 join products on orders.product_id = products.id
-order by orders.created_at desc;
+order by orders.created_at asc;
 
 --3. пользователи, которые никогда не заказывали
 select users.email
@@ -62,9 +62,8 @@ order by total_items_bought desc
 limit 5;
 
 --7. категории выше среднего 
-select 
-    category,
-    avg(price) as avg_price
+-- 7. Категории выше среднего
+select category
 from products
 group by category
 having avg(price) > (select avg(price) from products);

@@ -1,5 +1,5 @@
 
--- 3.1 Проектирование схемы (создание таблиц)
+-- Проектирование схемы (создание таблиц)
 
 -- Таблица студентов
 
@@ -30,7 +30,7 @@ create table grades (
     unique (student_id, course_id) -- Один студент - одна оценка за курс
 );
 
--- 3.2 Заполнение таблицы данными
+-- Заполнение таблицы данными
 
 -- Вставляем 3 курса
 insert into courses (course_name, teacher_name, credits) values
@@ -38,13 +38,13 @@ insert into courses (course_name, teacher_name, credits) values
 ('Statistics', 'Petrova', 3),
 ('Algorithms', 'Sidorov', 5);
 
---3 студента
+-- 3 студента
 insert into students (full_name, email, birth_date) values
 ('Alex Johnson', 'alex@example.com', '2000-01-15'),
 ('Maria Smith', 'maria@example.com', null),
 ('John Doe', 'john@example.com', '1999-05-20');
 
---4 оценки
+-- 4 оценки
 
 insert into grades (student_id, course_id, grade) values
 (1, 1, 95),
@@ -52,7 +52,7 @@ insert into grades (student_id, course_id, grade) values
 (2, 1, 75),
 (3, 3, 90);
 
--- 3.3 Обновление информации по двум студентам
+-- Обновление информации по двум студентам
 
 -- Обновление 1: Заполнение даты рождения Марии
 
@@ -66,12 +66,12 @@ update students
 set email = 'john.new@example.com'
 where id = 3;
 
--- 3.4 Удаление одного студента
+-- Удаление одного студента
 
 delete from grades where student_id = 3;
 delete from students where id = 3;
 
--- 4. Проверка
+-- Проверка
 
 select * from students;
 select s.full_name, c.course_name, g.grade
